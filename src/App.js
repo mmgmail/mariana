@@ -1,20 +1,28 @@
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import './App.css';
 import HomeScreen from './screens/HomeScreen';
-import MainScreen from './screens/HomeScreen';
+import RootScreen from './screens/RootScreen';
 import NoMatchScreen from './screens/NoMatchScreen';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeScreen />,
+    children: [
+      {
+        index: true,
+        element: <HomeScreen />,
+      },
+    ],
+    errorElement: <NoMatchScreen />,
+  },
+
+]);
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<MainScreen />}>
-          <Route index element={<HomeScreen />} />
-          <Route path="*" element={<NoMatchScreen />} />
-        </Route>
-      </Routes>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 

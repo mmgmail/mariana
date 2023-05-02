@@ -1,13 +1,11 @@
 import * as React from "react";
 import CssBaseline from '@mui/material/CssBaseline';
-import MainLayout from "../../components/MainLayout";
-import * as Styled from './styled';
+// import * as Styled from './styled';
 
-export default function  HomeScreen () {
+export default function RootScreen() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <MainLayout />
     </React.Fragment>
   )
 };
