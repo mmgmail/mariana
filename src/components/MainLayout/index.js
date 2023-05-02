@@ -4,6 +4,8 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import LeftBar from '../LeftBar';
 import RightBar from '../RightBar';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 const itemData = [
   {
@@ -62,20 +64,8 @@ export default function MainLayout() {
   const [images, setImages] = React.useState([]);
 
   const handleDragOver= (e) => {
-    console.log('e1', e)
     e.stopPropagation();
     e.preventDefault();
-    // register event position
-    // stageRef.current.setPointersPositions(e);
-    // add image
-    // setImages(
-    //   images.concat([
-    //     {
-    //       ...stageRef.current.getPointerPosition(),
-    //       src: dragUrl.current,
-    //     },
-    //   ])
-    // );
   }
 
   const handledragStart = (e, idx) => {
@@ -83,14 +73,45 @@ export default function MainLayout() {
     dragUrl.current = { src: e.target.src, idx };
   }
 
+  const onDropHandler = (e) => {
+    console.log('e3', e)
+    e.stopPropagation();
+    e.preventDefault();
+    // register event position
+    stageRef.current.setPointersPositions(e);
+    // add image
+    setImages(
+      images.concat([
+        {
+          ...stageRef.current.getPointerPosition(),
+          src: dragUrl.current,
+        },
+      ])
+    );
+  };
+
   return (
     <React.Fragment>
       <Grid container spacing={3}>
         <Grid item xs={12} md={9}>
-          <RightBar images={images} stageRef={stageRef} onDragOver={handleDragOver} />
+          <RightBar images={images} stageRef={stageRef} onDragOver={handleDragOver} onDrop={onDropHandler} />
         </Grid>
         <Grid item xs={12} md={3}>
-          <LeftBar onDragStart={handledragStart} itemData={itemData} />
+          {/* <LeftBar onDragStart={handledragStart} itemData={itemData} /> */}
+          <ImageList sx={{ height: 750 }} cols={2} rowHeight={164}>
+          {itemData.map((item, idx) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+                draggable="true"
+                onDragStart={(e) => handledragStart(e, idx)}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
         </Grid>
       </Grid>
     </React.Fragment>
