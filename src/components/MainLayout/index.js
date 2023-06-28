@@ -87,7 +87,7 @@ export default function MainLayout() {
   }
 
   const onDropHandler = (e) => {
-    console.log('e3', dragUrl.current)
+    // console.log('e3', dragUrl.current)
     e.stopPropagation();
     e.preventDefault();
     // register event position

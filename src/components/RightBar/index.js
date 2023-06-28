@@ -1,9 +1,10 @@
 
 import * as React from 'react';
-import { Stage, Layer, Image, Group, Rect, Transformer, Util } from 'react-konva';
+import { Stage, Layer, Image, Group, Rect, Text, Line, Transformer, Util } from 'react-konva';
 import useImage from 'use-image';
+import Logo from './bg1.png';
 
-const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect, onChange, onDragStart }) => {
+const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect, onChange, onDragStart, onRemove }) => {
   console.log('image', image)
   const [img] = useImage(image?.src?.src);
   const trRef = React.useRef();
@@ -21,10 +22,6 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
   //   // refShape.current.rotation(refGroup.current.rotation());
   // }
 
-  function hideSelectionBox() {
-    refShape.current.visible(false);
-  }
-
   const handleTransform = e => {
     const currentRotation = refGroup.current.rotation();
     const nearestRotation = Math.round(currentRotation / 45) * 45;
@@ -34,8 +31,8 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
   React.useEffect(() => {
     if (isSelected) {
       // we need to attach transformer manually
-      trRef.current.nodes([refGroup.current]);
-      trRef.current.getLayer().batchDraw();
+      // trRef.current.nodes([refGroup.current]);
+      // trRef.current.getLayer().batchDraw();
     }
   }, [isSelected]);
 
@@ -51,6 +48,8 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
         {...groupProps}
         onClick={onSelect}
         onTap={onSelect}
+        onTouchstart={onSelect}
+        onMouseDown={onSelect}
         onDragStart={onDragStart}
         onDragEnd={(e) => {
           onChange({
@@ -81,21 +80,60 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
           });
         }}
       >
-        {/* <Rect
-          width={img ? img.width : 0}
-          height={img ? img.height : 0}
-          ref={refShape}
-          strokeWidth={3}
-          stroke={'red'}
-          visible={false}
-        /> */}
+        {isSelected && (
+          <Group>
+            <Rect
+              width={img ? img.width : 0}
+              height={img ? img.height : 0}
+              ref={trRef}
+              strokeWidth={3}
+              stroke={'red'}
+              visible={true}
+            />
+            <Group
+              x={img.width / 2 - 22.5}
+              y={-img.height / 6}
+            >
+              <Rect
+                width={50}
+                height={30}
+                strokeWidth={2}
+                stroke={'red'}
+                fill={'lightgrey'}
+              />
+              <Line
+              x={-img.width * 1.37}
+              y={-img.height / 1.65}
+                points={[250, 100, 250, 130]}
+                stroke="red"
+                strokeWidth={1}
+              />
+              <Text
+                x={32}
+                y={8}
+                text="X"
+                fontSize={14}
+                fill="red"
+                onClick={onRemove}
+              />
+              <Text
+                x={10}
+                y={8}
+                text="?"
+                fontSize={14}
+                fill="red"
+                onClick={() => {}}
+              />
+            </Group>
+          </Group>
+        )}
         <Image
           image={img}
           shadowColor={'black'}
         />
         
       </Group>
-      {isSelected && (
+      {/* {isSelected && (
         <Transformer
           ref={trRef}
           resizeEnabled={false}
@@ -105,7 +143,7 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
             rotationSnaps: [0, 45, 90, 135, 180, 225, 270, 315],
           }}
         />
-      )}
+      )} */}
     </React.Fragment>
   );
 };
@@ -212,11 +250,14 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
   }
 
   return (
-    <div onDragOver={onDragOver} onDrop={onDrop}>
+    <div onDragOver={onDragOver} onDrop={onDrop} style={{ width: '100%', position: 'relative' }}>
+      <img src={Logo}
+        style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: 800 }}
+      />
       <Stage
-        width={2000}
+        width={1108}
         height={800}
-        style={{ border: '1px solid grey', backgroundColor: 'lightGrey' }}
+        style={{ border: '1px solid grey', backgroundColor: 'transparent' }}
         ref={stageRef}
         onMouseDown={checkDeselect}
         onTouchStart={checkDeselect}
@@ -225,7 +266,7 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
           onDragMove={handlerDragMove}
           ref={refLayer}
         >
-          {images.map((image, i) => {
+            {images.map((image, i) => {
             return <URLImage
               key={i}
               image={image}
@@ -240,6 +281,10 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
                 const rects = images.slice();
                 rects[i] = {...image, ...newAttrs};
                 setImages(rects);
+              }}
+              onRemove={() => {
+                const filterRects = images.filter((el) => el.src.id !== selectedId);
+                setImages(filterRects);
               }}
             />;
           })}
