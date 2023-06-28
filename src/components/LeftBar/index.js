@@ -4,7 +4,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 export default function LeftBar({ onDragStart, itemData }) {
   return (
-    <ImageList sx={{ height: 750 }} cols={2} rowHeight={164}>
+    <ImageList sx={{ height: 350 }} cols={2} rowHeight={164}>
       {itemData.map((item, idx) => (
         <ImageListItem key={item.img}>
           <img

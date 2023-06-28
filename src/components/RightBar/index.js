@@ -294,7 +294,6 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
                 onInfo={() => {
                   setCurrItem(image?.src?.item);
                   setTimeout(() => {
-                    console.log('currItem', currItem);
                     setOpen(true);
                   }, 10);
                 }}

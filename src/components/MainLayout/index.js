@@ -6,6 +6,15 @@ import LeftBar from '../LeftBar';
 import RightBar from '../RightBar';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+
+import GoodsCtx from '../../contexts/goodsCtx';
 
 const itemData = [
   {
@@ -86,6 +95,8 @@ export default function MainLayout() {
   const dragUrl = React.useRef({ src: null, idx: -1 });
   const stageRef = React.useRef();
   const [images, setImages] = React.useState([]);
+  const goodsCtx = React.useContext(GoodsCtx);
+  const [cost, setCost] = React.useState(0);
 
   const handleDragOver= (e) => {
     e.stopPropagation();
@@ -115,6 +126,18 @@ export default function MainLayout() {
     );
   };
 
+  React.useEffect(() => {
+    goodsCtx.items = images;
+    let arrSum = [];
+    for (let i = 0; i < images.length; i++) {
+      arrSum.push(+images[i]?.src?.item?.price);
+    }
+
+    const sum = arrSum.reduce((partialSum, a) => partialSum + a, 0);
+    setCost(sum);
+
+  }, [JSON.stringify(images)])
+
   return (
     <React.Fragment>
       <Grid container spacing={3}>
@@ -123,20 +146,42 @@ export default function MainLayout() {
         </Grid>
         <Grid item xs={12} md={3}>
           {/* <LeftBar onDragStart={handledragStart} itemData={itemData} /> */}
-          <ImageList sx={{ height: 750 }} cols={2} rowHeight={164}>
-          {itemData.map((item, idx) => (
-            <ImageListItem key={item.img}>
-              <img
-                src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-                draggable="true"
-                onDragStart={(e) => handledragStart(e, idx, item)}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+          
+          <Accordion>
+            <AccordionSummary
+              // expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>Configuration</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ImageList sx={{ height: 550 }} cols={2} rowHeight={164}>
+                {itemData.map((item, idx) => (
+                  <ImageListItem key={item.img}>
+                    <img
+                      src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                      srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                      alt={item.title}
+                      loading="lazy"
+                      draggable="true"
+                      onDragStart={(e) => handledragStart(e, idx, item)}
+                    />
+                  </ImageListItem>
+                ))}
+              </ImageList>
+            </AccordionDetails>
+          </Accordion>
+          <Card sx={{ minWidth: 275 }}>
+            <CardContent>
+              <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                COST
+              </Typography>
+              <Typography variant="h5" component="div">
+                {cost}
+              </Typography>
+            </CardContent>
+          </Card>
         </Grid>
       </Grid>
     </React.Fragment>
