@@ -178,7 +178,7 @@ export default function MainLayout() {
                 COST
               </Typography>
               <Typography variant="h5" component="div">
-                {cost}
+                {cost} UAH
               </Typography>
             </CardContent>
           </Card>
