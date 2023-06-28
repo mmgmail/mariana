@@ -12,61 +12,73 @@ const itemData = [
     img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
     title: 'Breakfast',
     id: 0,
+    price: 10000
   },
   {
     img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
     title: 'Burger',
     id: 1,
+    price: 20000
   },
   {
     img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
     title: 'Camera',
     id: 2,
+    price: 5000
   },
   {
     img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
     title: 'Coffee',
     id: 3,
+    price: 15000
   },
   {
     img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
     title: 'Hats',
     id: 4,
+    price: 25000
   },
   {
     img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
     title: 'Honey',
     id: 5,
+    price: 12000
   },
   {
     img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
     title: 'Basketball',
     id: 6,
+    price: 13000
   },
   {
     img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
     title: 'Fern',
     id: 7,
+    price: 21000
   },
   {
     img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
     title: 'Mushrooms',
     id: 8,
+    price: 22000
   },
   {
     img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
     title: 'Tomato basil',
     id: 9,
+    price: 20100
   },
   {
     img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
     title: 'Sea star',
     id: 10,
+    price: 18000
   },
   {
     img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
     title: 'Bike',
     id: 11,
+    price: 7000
   },
 ];
 
@@ -80,10 +92,10 @@ export default function MainLayout() {
     e.preventDefault();
   }
 
-  const handledragStart = (e, idx) => {
-    // console.log('e2', dragUrl.current)
+  const handledragStart = (e, idx, item) => {
+    console.log('e2', dragUrl.current)
     const id = "id" + Math.random().toString(16).slice(2);
-    dragUrl.current = { src: e.target.src, idx, id  };
+    dragUrl.current = { src: e.target.src, idx, id, item };
   }
 
   const onDropHandler = (e) => {
@@ -120,7 +132,7 @@ export default function MainLayout() {
                 alt={item.title}
                 loading="lazy"
                 draggable="true"
-                onDragStart={(e) => handledragStart(e, idx)}
+                onDragStart={(e) => handledragStart(e, idx, item)}
               />
             </ImageListItem>
           ))}

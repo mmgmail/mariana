@@ -3,8 +3,9 @@ import * as React from 'react';
 import { Stage, Layer, Image, Group, Rect, Text, Line, Transformer, Util } from 'react-konva';
 import useImage from 'use-image';
 import Logo from './bg1.png';
+import SimpleDialog from '../SimpleDialog';
 
-const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect, onChange, onDragStart, onRemove }) => {
+const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect, onChange, onDragStart, onRemove, onInfo }) => {
   console.log('image', image)
   const [img] = useImage(image?.src?.src);
   const trRef = React.useRef();
@@ -122,7 +123,7 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
                 text="?"
                 fontSize={14}
                 fill="red"
-                onClick={() => {}}
+                onClick={onInfo}
               />
             </Group>
           </Group>
@@ -152,7 +153,9 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
   const [rectangles, setRectangles] = React.useState(images);
   const [detectedSide, setDetectedSide] = React.useState(false);
   const [selectedId, selectShape] = React.useState(null);
-
+  const [currItem, setCurrItem] = React.useState(null);
+  const [open, setOpen] = React.useState(false);
+  
   const refLayer = React.useRef(null);
   
   const checkDeselect = (e) => {
@@ -250,46 +253,56 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
   }
 
   return (
-    <div onDragOver={onDragOver} onDrop={onDrop} style={{ width: '100%', position: 'relative' }}>
-      <img src={Logo}
-        style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: 800 }}
-      />
-      <Stage
-        width={1108}
-        height={800}
-        style={{ border: '1px solid grey', backgroundColor: 'transparent' }}
-        ref={stageRef}
-        onMouseDown={checkDeselect}
-        onTouchStart={checkDeselect}
-      >
-        <Layer
-          onDragMove={handlerDragMove}
-          ref={refLayer}
+    <React.Fragment>
+      <SimpleDialog item={currItem} open={open} onClose={() => setOpen(false)}/>
+      <div onDragOver={onDragOver} onDrop={onDrop} style={{ width: '100%', position: 'relative' }}>
+        <img src={Logo}
+          style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: 800 }}
+        />
+        <Stage
+          width={1108}
+          height={800}
+          style={{ border: '1px solid grey', backgroundColor: 'transparent' }}
+          ref={stageRef}
+          onMouseDown={checkDeselect}
+          onTouchStart={checkDeselect}
         >
-            {images.map((image, i) => {
-            return <URLImage
-              key={i}
-              image={image}
-              stageRef={stageRef}
-              refLayer={refLayer}
-              shapeProps={image}
-              isSelected={image.src.id === selectedId}
-              onSelect={(e) => {
-                selectShape(image?.src?.id);
-              }}
-              onChange={(newAttrs) => {
-                const rects = images.slice();
-                rects[i] = {...image, ...newAttrs};
-                setImages(rects);
-              }}
-              onRemove={() => {
-                const filterRects = images.filter((el) => el.src.id !== selectedId);
-                setImages(filterRects);
-              }}
-            />;
-          })}
-        </Layer>
-      </Stage>
-    </div>
+          <Layer
+            onDragMove={handlerDragMove}
+            ref={refLayer}
+          >
+              {images.map((image, i) => {
+              return <URLImage
+                key={i}
+                image={image}
+                stageRef={stageRef}
+                refLayer={refLayer}
+                shapeProps={image}
+                isSelected={image.src.id === selectedId}
+                onSelect={(e) => {
+                  selectShape(image?.src?.id);
+                }}
+                onChange={(newAttrs) => {
+                  const rects = images.slice();
+                  rects[i] = {...image, ...newAttrs};
+                  setImages(rects);
+                }}
+                onRemove={() => {
+                  const filterRects = images.filter((el) => el.src.id !== selectedId);
+                  setImages(filterRects);
+                }}
+                onInfo={() => {
+                  setCurrItem(image?.src?.item);
+                  setTimeout(() => {
+                    console.log('currItem', currItem);
+                    setOpen(true);
+                  }, 10);
+                }}
+              />;
+            })}
+          </Layer>
+        </Stage>
+      </div>
+    </React.Fragment>
   )
 }
