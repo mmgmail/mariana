@@ -22,7 +22,7 @@ export default function  HomeScreen () {
       <Grid container spacing={2}>
         <Grid item xs={8}>
           <Item>
-            <Link to="configurator/1">Some Sofa</Link>
+            <Link to="configurator/soho">Some Sofa</Link>
           </Item>
         </Grid>
         <Grid item xs={4}>

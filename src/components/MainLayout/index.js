@@ -21,7 +21,6 @@ export default function MainLayout() {
   const [width, setWidth] = React.useState(0);
   const [length, setLength] = React.useState(0);
   const [height, setHeight] = React.useState(0);
-  const [data, setData] = React.useState(null);
 
   const handleDragOver= (e) => {
     e.stopPropagation();
@@ -92,13 +91,11 @@ export default function MainLayout() {
             </AccordionSummary>
             <AccordionDetails>
               <ImageList sx={{ height: 550 }} cols={2} rowHeight={164}>
-                  {goodsJson?.goods?.map((item, idx) => {
-                    const Image = React.lazy(() => import(item.img));
+                  {goodsJson?.goods?.soho.map((item, idx) => {
                     return (
                       <ImageListItem key={item.img}>
-                        <Image
-                          // src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                          // src={`${item.img}`}
+                        <img
+                          src={`${process.env.PUBLIC_URL}${item.img}?w=164&h=164&fit=crop&auto=format`}
                           srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                           alt={item.title}
                           loading="lazy"

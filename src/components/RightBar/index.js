@@ -10,7 +10,7 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
   const [img] = useImage(image?.src?.src);
   const trRef = React.useRef();
   const refGroup = React.useRef(null);
-
+  
   // function updateSelectionBox() {
   //   console.log(' refShape.current',  refShape.current)
   //   refShape.current.visible(true);
