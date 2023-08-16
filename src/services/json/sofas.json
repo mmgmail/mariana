@@ -1,0 +1,1253 @@
+{
+  "sofas":
+  [
+    {
+      "link": "maestro",
+      "name": "Маестро",
+      "type": "Модульний куток",
+      "pic": "/assets/images/sofas/maestro/origin.png",
+      "parts": [
+        {
+          "name": "M1",
+          "pic": "/assets/images/sofas/maestro/m1.png",
+          "type": "",
+          "width": 31,
+          "height": 85,
+          "depth": 100,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 4106
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 4301
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 4627
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 4953
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 5279
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 5866
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 6582
+            }
+          }
+        },
+        {
+          "name": "M1 под",
+          "pic": "/assets/images/sofas/maestro/m1_pod.png",
+          "type": "",
+          "width": 31,
+          "height": 55,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 5149
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 5279
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 5605
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 6061
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 6452
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 7104
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 7951
+            }
+          }
+        },
+        {
+          "name": "M2P",
+          "pic": "/assets/images/sofas/maestro/m2.png",
+          "type": "",
+          "width": 142,
+          "height": 85,
+          "depth": 105,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 20222
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 20857
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 21988
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 23206
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 24120
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 25825
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 27348
+            }
+          }
+        },
+        {
+          "name": "M3",
+          "pic": "/assets/images/sofas/maestro/m3.png",
+          "type": "",
+          "width": 110,
+          "height": 85,
+          "depth": 110,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 12252
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 12709
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 13621
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 14533
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 15446
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 16945
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 18965
+            }
+          }
+        },
+        {
+          "name": "M5",
+          "pic": "/assets/images/sofas/maestro/m5.png",
+          "type": "",
+          "width": 70,
+          "height": 85,
+          "depth": 105,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 8668
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 8929
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 9515
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 10037
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 10623
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 11601
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 12904
+            }
+          }
+        },
+        {
+          "name": "M6",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 76,
+          "height": 85,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 13165
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 13491
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 14142
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 14794
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 15446
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 16619
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 18118
+            }
+          }
+        },
+        {
+          "name": "M10",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 15,
+          "height": 60,
+          "depth": 95,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 1955
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 2086
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 2281
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 2477
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 2672
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 2998
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 3454
+            }
+          }
+        },
+        {
+          "name": "M10 под",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 15,
+          "height": 60,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 1955
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 2086
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 2281
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 2477
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 2672
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 2998
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 3454
+            }
+          }
+        }
+      ]
+    },
+    {
+      "link": "maestro2",
+      "name": "Маестро2",
+      "type": "Модульний куток",
+      "pic": "/assets/images/sofas/maestro/origin.png",
+      "parts": [
+        {
+          "name": "M1",
+          "pic": "/assets/images/sofas/maestro/m1.png",
+          "type": "",
+          "width": 31,
+          "height": 85,
+          "depth": 100,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 4106
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 4301
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 4627
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 4953
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 5279
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 5866
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 6582
+            }
+          }
+        },
+        {
+          "name": "M1 под",
+          "pic": "/assets/images/sofas/maestro/m1_pod.png",
+          "type": "",
+          "width": 31,
+          "height": 55,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 5149
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 5279
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 5605
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 6061
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 6452
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 7104
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 7951
+            }
+          }
+        },
+        {
+          "name": "M2P",
+          "pic": "/assets/images/sofas/maestro/m2.png",
+          "type": "",
+          "width": 142,
+          "height": 85,
+          "depth": 105,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 20222
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 20857
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 21988
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 23206
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 24120
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 25825
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 27348
+            }
+          }
+        },
+        {
+          "name": "M3",
+          "pic": "/assets/images/sofas/maestro/m3.png",
+          "type": "",
+          "width": 110,
+          "height": 85,
+          "depth": 110,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 12252
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 12709
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 13621
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 14533
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 15446
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 16945
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 18965
+            }
+          }
+        },
+        {
+          "name": "M5",
+          "pic": "/assets/images/sofas/maestro/m5.png",
+          "type": "",
+          "width": 70,
+          "height": 85,
+          "depth": 105,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 8668
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 8929
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 9515
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 10037
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 10623
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 11601
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 12904
+            }
+          }
+        },
+        {
+          "name": "M6",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 76,
+          "height": 85,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 13165
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 13491
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 14142
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 14794
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 15446
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 16619
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 18118
+            }
+          }
+        },
+        {
+          "name": "M10",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 15,
+          "height": 60,
+          "depth": 95,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 1955
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 2086
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 2281
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 2477
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 2672
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 2998
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 3454
+            }
+          }
+        },
+        {
+          "name": "M10 под",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 15,
+          "height": 60,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 1955
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 2086
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 2281
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 2477
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 2672
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 2998
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 3454
+            }
+          }
+        }
+      ]
+    },
+    {
+      "link": "maestro3",
+      "name": "Маестро3",
+      "type": "Модульний куток",
+      "pic": "/assets/images/sofas/maestro/origin.png",
+      "parts": [
+        {
+          "name": "M1",
+          "pic": "/assets/images/sofas/maestro/m1.png",
+          "type": "",
+          "width": 31,
+          "height": 85,
+          "depth": 100,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 4106
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 4301
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 4627
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 4953
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 5279
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 5866
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 6582
+            }
+          }
+        },
+        {
+          "name": "M1 под",
+          "pic": "/assets/images/sofas/maestro/m1_pod.png",
+          "type": "",
+          "width": 31,
+          "height": 55,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 5149
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 5279
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 5605
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 6061
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 6452
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 7104
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 7951
+            }
+          }
+        },
+        {
+          "name": "M2P",
+          "pic": "/assets/images/sofas/maestro/m2.png",
+          "type": "",
+          "width": 142,
+          "height": 85,
+          "depth": 105,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 20222
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 20857
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 21988
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 23206
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 24120
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 25825
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 27348
+            }
+          }
+        },
+        {
+          "name": "M3",
+          "pic": "/assets/images/sofas/maestro/m3.png",
+          "type": "",
+          "width": 110,
+          "height": 85,
+          "depth": 110,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 12252
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 12709
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 13621
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 14533
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 15446
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 16945
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 18965
+            }
+          }
+        },
+        {
+          "name": "M5",
+          "pic": "/assets/images/sofas/maestro/m5.png",
+          "type": "",
+          "width": 70,
+          "height": 85,
+          "depth": 105,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 8668
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 8929
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 9515
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 10037
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 10623
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 11601
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 12904
+            }
+          }
+        },
+        {
+          "name": "M6",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 76,
+          "height": 85,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 13165
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 13491
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 14142
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 14794
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 15446
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 16619
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 18118
+            }
+          }
+        },
+        {
+          "name": "M10",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 15,
+          "height": 60,
+          "depth": 95,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 1955
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 2086
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 2281
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 2477
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 2672
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 2998
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 3454
+            }
+          }
+        },
+        {
+          "name": "M10 под",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 15,
+          "height": 60,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 1955
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 2086
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 2281
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 2477
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 2672
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 2998
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 3454
+            }
+          }
+        }
+      ]
+    },
+    {
+      "link": "maestro4",
+      "name": "Маестро4",
+      "type": "Модульний куток",
+      "pic": "/assets/images/sofas/maestro/origin.png",
+      "parts": [
+        {
+          "name": "M1",
+          "pic": "/assets/images/sofas/maestro/m1.png",
+          "type": "",
+          "width": 31,
+          "height": 85,
+          "depth": 100,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 4106
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 4301
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 4627
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 4953
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 5279
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 5866
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 6582
+            }
+          }
+        },
+        {
+          "name": "M1 под",
+          "pic": "/assets/images/sofas/maestro/m1_pod.png",
+          "type": "",
+          "width": 31,
+          "height": 55,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 5149
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 5279
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 5605
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 6061
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 6452
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 7104
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 7951
+            }
+          }
+        },
+        {
+          "name": "M2P",
+          "pic": "/assets/images/sofas/maestro/m2.png",
+          "type": "",
+          "width": 142,
+          "height": 85,
+          "depth": 105,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 20222
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 20857
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 21988
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 23206
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 24120
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 25825
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 27348
+            }
+          }
+        },
+        {
+          "name": "M3",
+          "pic": "/assets/images/sofas/maestro/m3.png",
+          "type": "",
+          "width": 110,
+          "height": 85,
+          "depth": 110,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 12252
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 12709
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 13621
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 14533
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 15446
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 16945
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 18965
+            }
+          }
+        },
+        {
+          "name": "M5",
+          "pic": "/assets/images/sofas/maestro/m5.png",
+          "type": "",
+          "width": 70,
+          "height": 85,
+          "depth": 105,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 8668
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 8929
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 9515
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 10037
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 10623
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 11601
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 12904
+            }
+          }
+        },
+        {
+          "name": "M6",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 76,
+          "height": 85,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 13165
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 13491
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 14142
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 14794
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 15446
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 16619
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 18118
+            }
+          }
+        },
+        {
+          "name": "M10",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 15,
+          "height": 60,
+          "depth": 95,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 1955
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 2086
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 2281
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 2477
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 2672
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 2998
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 3454
+            }
+          }
+        },
+        {
+          "name": "M10 под",
+          "pic": "/assets/images/sofas/maestro/m6.png",
+          "type": "",
+          "width": 15,
+          "height": 60,
+          "depth": 170,
+          "cloth": {
+            "1": {
+              "name": "Колір 1",
+              "price": 1955
+            },
+            "2": {
+              "name": "Колір 2",
+              "price": 2086
+            },
+            "3": {
+              "name": "Колір 3",
+              "price": 2281
+            },
+            "4": {
+              "name": "Колір 4",
+              "price": 2477
+            },
+            "5": {
+              "name": "Колір 5",
+              "price": 2672
+            },
+            "6": {
+              "name": "Колір 6",
+              "price": 2998
+            },
+            "7": {
+              "name": "Колір 7",
+              "price": 3454
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
