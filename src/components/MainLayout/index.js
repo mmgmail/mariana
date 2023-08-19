@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { useParams } from "react-router-dom";
+
 import Grid from '@mui/material/Grid';
-import RightBar from '../RightBar';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Accordion from '@mui/material/Accordion';
@@ -9,8 +10,12 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+
+import RightBar from '../RightBar';
 import GoodsCtx from '../../contexts/goodsCtx';
 import goodsJson from '../../services/json/goods.json';
+import sofasJson from '../../services/json/sofas.json';
+import * as S from './styled';
 
 export default function MainLayout() {
   const dragUrl = React.useRef({ src: null, idx: -1 });
@@ -21,6 +26,8 @@ export default function MainLayout() {
   const [width, setWidth] = React.useState(0);
   const [length, setLength] = React.useState(0);
   const [height, setHeight] = React.useState(0);
+  const { id: itemId } = useParams();
+  const good = sofasJson.sofas.find(item => item.link === itemId);
 
   const handleDragOver= (e) => {
     e.stopPropagation();
@@ -28,7 +35,6 @@ export default function MainLayout() {
   }
 
   const handledragStart = (e, idx, item) => {
-    console.log('e2', dragUrl.current)
     const id = "id" + Math.random().toString(16).slice(2);
     dragUrl.current = { src: e.target.src, idx, id, item };
   }
@@ -57,9 +63,9 @@ export default function MainLayout() {
     let arrLength = [];
     let arrHeight = [];
     for (let i = 0; i < images.length; i++) {
-      arrSum.push(+images[i]?.src?.item?.price);
+      arrSum.push(+images[i]?.src?.item?.cloth['1'].price);
       arrWidth.push(+images[i]?.src?.item?.width);
-      arrLength.push(+images[i]?.src?.item?.length);
+      arrLength.push(+images[i]?.src?.item?.depth);
       arrHeight.push(+images[i]?.src?.item?.height);
     }
 
@@ -91,18 +97,18 @@ export default function MainLayout() {
             </AccordionSummary>
             <AccordionDetails>
               <ImageList sx={{ height: 550 }} cols={2} rowHeight={164}>
-                  {goodsJson?.goods?.soho.map((item, idx) => {
+                  {good?.parts?.map((item, idx) => {
                     return (
-                      <ImageListItem key={item.img}>
+                      <S.ImageListItemStyled key={idx}>
                         <img
-                          src={`${process.env.PUBLIC_URL}${item.img}?w=164&h=164&fit=crop&auto=format`}
-                          srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                          alt={item.title}
+                          src={`${process.env.PUBLIC_URL}${item.pic}`}
+                          alt={item.name}
                           loading="lazy"
                           draggable="true"
                           onDragStart={(e) => handledragStart(e, idx, item)}
+                          style={{ maxWidth: '50%', maxHeight: '50%', objectFit: 'contain' }}
                         />
-                      </ImageListItem>
+                      </S.ImageListItemStyled>
                     )
                   })
                 }

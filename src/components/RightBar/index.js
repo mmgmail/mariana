@@ -5,7 +5,7 @@ import useImage from 'use-image';
 import Logo from './bg1.png';
 import SimpleDialog from '../SimpleDialog';
 
-const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect, onChange, onDragStart, onRemove, onInfo }) => {
+const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect, onChange, onDragStart, onRemove, onInfo, onTop, onBottom }) => {
   console.log('image', image)
   const [img] = useImage(image?.src?.src);
   const trRef = React.useRef();
@@ -87,34 +87,34 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
               width={img ? img.width : 0}
               height={img ? img.height : 0}
               ref={trRef}
-              strokeWidth={3}
-              stroke={'red'}
+              strokeWidth={2}
+              stroke={'white'}
               visible={true}
             />
             <Group
-              x={img.width / 2 - 22.5}
-              y={-img.height / 6}
+              x={img.width / 2 - 42.5}
+              y={-img.height / 3}
             >
               <Rect
-                width={50}
+                width={85}
                 height={30}
                 strokeWidth={2}
-                stroke={'red'}
+                stroke={'white'}
                 fill={'lightgrey'}
               />
-              <Line
-              x={-img.width * 1.37}
-              y={-img.height / 1.65}
+              {/* <Line
+              x={-img.width * 1.075}
+              y={-img.height / 1.44}
                 points={[250, 100, 250, 130]}
-                stroke="red"
+                stroke="white"
                 strokeWidth={1}
-              />
+              /> */}
               <Text
                 x={32}
                 y={8}
                 text="X"
                 fontSize={14}
-                fill="red"
+                fill="grey"
                 onClick={onRemove}
               />
               <Text
@@ -122,12 +122,29 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
                 y={8}
                 text="?"
                 fontSize={14}
-                fill="red"
+                fill="grey"
                 onClick={onInfo}
+              />
+              <Text
+                x={53}
+                y={5}
+                text="↑"
+                fontSize={18}
+                fill="grey"
+                onClick={onTop}
+              />
+              <Text
+                x={68}
+                y={5}
+                text="↓"
+                fontSize={18}
+                fill="grey"
+                onClick={onBottom}
               />
             </Group>
           </Group>
         )}
+
         <Image
           image={img}
           shadowColor={'black'}
@@ -137,7 +154,7 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
       {/* {isSelected && (
         <Transformer
           ref={trRef}
-          resizeEnabled={false}
+          resizeEnabled={true}
           anchorSize={20}
           borderDash={[3, 3]}
           transformerConfig={{
@@ -254,7 +271,7 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
 
   return (
     <React.Fragment>
-      <SimpleDialog item={currItem} open={open} onClose={() => setOpen(false)}/>
+      <SimpleDialog item={currItem} open={open} onClose={() => setOpen(false)} />
       <div onDragOver={onDragOver} onDrop={onDrop} style={{ width: '100%', position: 'relative' }}>
         <img src={Logo}
           style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: 800 }}

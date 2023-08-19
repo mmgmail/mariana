@@ -10,7 +10,7 @@
         {
           "name": "M1",
           "pic": "/assets/images/sofas/maestro/m1.png",
-          "type": "",
+          "type": "Модуль",
           "width": 31,
           "height": 85,
           "depth": 100,
@@ -48,7 +48,7 @@
         {
           "name": "M1 под",
           "pic": "/assets/images/sofas/maestro/m1_pod.png",
-          "type": "",
+          "type": "Модуль",
           "width": 31,
           "height": 55,
           "depth": 170,
@@ -86,7 +86,7 @@
         {
           "name": "M2P",
           "pic": "/assets/images/sofas/maestro/m2.png",
-          "type": "",
+          "type": "Модуль",
           "width": 142,
           "height": 85,
           "depth": 105,
@@ -124,7 +124,7 @@
         {
           "name": "M3",
           "pic": "/assets/images/sofas/maestro/m3.png",
-          "type": "",
+          "type": "Модуль",
           "width": 110,
           "height": 85,
           "depth": 110,
@@ -162,7 +162,7 @@
         {
           "name": "M5",
           "pic": "/assets/images/sofas/maestro/m5.png",
-          "type": "",
+          "type": "Модуль",
           "width": 70,
           "height": 85,
           "depth": 105,
@@ -200,7 +200,7 @@
         {
           "name": "M6",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 76,
           "height": 85,
           "depth": 170,
@@ -238,7 +238,7 @@
         {
           "name": "M10",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 15,
           "height": 60,
           "depth": 95,
@@ -276,7 +276,7 @@
         {
           "name": "M10 под",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 15,
           "height": 60,
           "depth": 170,
@@ -322,7 +322,7 @@
         {
           "name": "M1",
           "pic": "/assets/images/sofas/maestro/m1.png",
-          "type": "",
+          "type": "Модуль",
           "width": 31,
           "height": 85,
           "depth": 100,
@@ -360,7 +360,7 @@
         {
           "name": "M1 под",
           "pic": "/assets/images/sofas/maestro/m1_pod.png",
-          "type": "",
+          "type": "Модуль",
           "width": 31,
           "height": 55,
           "depth": 170,
@@ -398,7 +398,7 @@
         {
           "name": "M2P",
           "pic": "/assets/images/sofas/maestro/m2.png",
-          "type": "",
+          "type": "Модуль",
           "width": 142,
           "height": 85,
           "depth": 105,
@@ -436,7 +436,7 @@
         {
           "name": "M3",
           "pic": "/assets/images/sofas/maestro/m3.png",
-          "type": "",
+          "type": "Модуль",
           "width": 110,
           "height": 85,
           "depth": 110,
@@ -474,7 +474,7 @@
         {
           "name": "M5",
           "pic": "/assets/images/sofas/maestro/m5.png",
-          "type": "",
+          "type": "Модуль",
           "width": 70,
           "height": 85,
           "depth": 105,
@@ -512,7 +512,7 @@
         {
           "name": "M6",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 76,
           "height": 85,
           "depth": 170,
@@ -550,7 +550,7 @@
         {
           "name": "M10",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 15,
           "height": 60,
           "depth": 95,
@@ -588,7 +588,7 @@
         {
           "name": "M10 под",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 15,
           "height": 60,
           "depth": 170,
@@ -634,7 +634,7 @@
         {
           "name": "M1",
           "pic": "/assets/images/sofas/maestro/m1.png",
-          "type": "",
+          "type": "Модуль",
           "width": 31,
           "height": 85,
           "depth": 100,
@@ -672,7 +672,7 @@
         {
           "name": "M1 под",
           "pic": "/assets/images/sofas/maestro/m1_pod.png",
-          "type": "",
+          "type": "Модуль",
           "width": 31,
           "height": 55,
           "depth": 170,
@@ -710,7 +710,7 @@
         {
           "name": "M2P",
           "pic": "/assets/images/sofas/maestro/m2.png",
-          "type": "",
+          "type": "Модуль",
           "width": 142,
           "height": 85,
           "depth": 105,
@@ -748,7 +748,7 @@
         {
           "name": "M3",
           "pic": "/assets/images/sofas/maestro/m3.png",
-          "type": "",
+          "type": "Модуль",
           "width": 110,
           "height": 85,
           "depth": 110,
@@ -786,7 +786,7 @@
         {
           "name": "M5",
           "pic": "/assets/images/sofas/maestro/m5.png",
-          "type": "",
+          "type": "Модуль",
           "width": 70,
           "height": 85,
           "depth": 105,
@@ -824,7 +824,7 @@
         {
           "name": "M6",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 76,
           "height": 85,
           "depth": 170,
@@ -862,7 +862,7 @@
         {
           "name": "M10",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 15,
           "height": 60,
           "depth": 95,
@@ -900,7 +900,7 @@
         {
           "name": "M10 под",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 15,
           "height": 60,
           "depth": 170,
@@ -946,7 +946,7 @@
         {
           "name": "M1",
           "pic": "/assets/images/sofas/maestro/m1.png",
-          "type": "",
+          "type": "Модуль",
           "width": 31,
           "height": 85,
           "depth": 100,
@@ -984,7 +984,7 @@
         {
           "name": "M1 под",
           "pic": "/assets/images/sofas/maestro/m1_pod.png",
-          "type": "",
+          "type": "Модуль",
           "width": 31,
           "height": 55,
           "depth": 170,
@@ -1022,7 +1022,7 @@
         {
           "name": "M2P",
           "pic": "/assets/images/sofas/maestro/m2.png",
-          "type": "",
+          "type": "Модуль",
           "width": 142,
           "height": 85,
           "depth": 105,
@@ -1060,7 +1060,7 @@
         {
           "name": "M3",
           "pic": "/assets/images/sofas/maestro/m3.png",
-          "type": "",
+          "type": "Модуль",
           "width": 110,
           "height": 85,
           "depth": 110,
@@ -1098,7 +1098,7 @@
         {
           "name": "M5",
           "pic": "/assets/images/sofas/maestro/m5.png",
-          "type": "",
+          "type": "Модуль",
           "width": 70,
           "height": 85,
           "depth": 105,
@@ -1136,7 +1136,7 @@
         {
           "name": "M6",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 76,
           "height": 85,
           "depth": 170,
@@ -1174,7 +1174,7 @@
         {
           "name": "M10",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 15,
           "height": 60,
           "depth": 95,
@@ -1212,7 +1212,7 @@
         {
           "name": "M10 под",
           "pic": "/assets/images/sofas/maestro/m6.png",
-          "type": "",
+          "type": "Модуль",
           "width": 15,
           "height": 60,
           "depth": 170,

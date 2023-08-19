@@ -7,14 +7,14 @@ export default function LeftBar({ onDragStart, itemData }) {
     <ImageList sx={{ height: 350 }} cols={2} rowHeight={164}>
       {itemData.map((item, idx) => (
         <ImageListItem key={item.img}>
-          <img
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+          {/* <img
+            src={`${item.img}?w=104&h=104&fit=crop&auto=format`}
+            srcSet={`${item.img}?w=104&h=104&fit=crop&auto=format&dpr=2 2x`}
             alt={item.title}
             loading="lazy"
             draggable="true"
             onDragStart={(e) => onDragStart(e, idx)}
-          />
+          /> */}
         </ImageListItem>
       ))}
     </ImageList>

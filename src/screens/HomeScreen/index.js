@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Outlet, Link, useRoutes, useParams } from "react-router-dom";
+import { Outlet, Link, Route } from "react-router-dom";
 
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -23,8 +23,6 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function  HomeScreen () {
-
-  console.log('sofasJson', sofasJson.sofas)
 
   return (
     <React.Fragment>
