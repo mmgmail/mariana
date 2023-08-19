@@ -1,16 +1,21 @@
 
 import * as React from 'react';
+import Konva from 'konva';
 import { Stage, Layer, Image, Group, Rect, Text, Line, Transformer, Util } from 'react-konva';
 import useImage from 'use-image';
+
 import Logo from './bg1.png';
 import SimpleDialog from '../SimpleDialog';
+import GoodsCtx from '../../contexts/goodsCtx';
 
 const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect, onChange, onDragStart, onRemove, onInfo, onTop, onBottom }) => {
   // console.log('image', image)
   const [img] = useImage(image?.src?.src);
+  console.log('img', img)
   const trRef = React.useRef();
   const refGroup = React.useRef(null);
-  
+  const imageRef = React.useRef(null);
+
   // function updateSelectionBox() {
   //   console.log(' refShape.current',  refShape.current)
   //   refShape.current.visible(true);
@@ -146,9 +151,9 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
         )}
 
         <Image
+          ref={imageRef}
           image={img}
-          shadowColor={'black'}
-        />
+        />  
         
       </Group>
       {/* {isSelected && (
@@ -167,6 +172,7 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
 };
 
 export default function RightBar({ stageRef, images, onDragOver, onDrop, setImages }) {
+  const { colorId } = React.useContext(GoodsCtx);
   const [rectangles, setRectangles] = React.useState(images);
   const [detectedSide, setDetectedSide] = React.useState(false);
   const [selectedId, selectShape] = React.useState(null);
@@ -277,7 +283,7 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
           style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: 800 }}
         />
         <Stage
-          width={1108}
+          width={1330}
           height={800}
           style={{ border: '1px solid grey', backgroundColor: 'transparent' }}
           ref={stageRef}

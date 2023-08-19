@@ -28,6 +28,7 @@ export const LinkStyled = styled(Link)`
 export const ClothItem = styled.div`
   width: 35px;
   height: 35px;
+  min-width: 35px;
   border-radius: 50%;
   border-width: 2px;
   border-style: solid;
