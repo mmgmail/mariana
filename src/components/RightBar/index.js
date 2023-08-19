@@ -6,7 +6,7 @@ import Logo from './bg1.png';
 import SimpleDialog from '../SimpleDialog';
 
 const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect, onChange, onDragStart, onRemove, onInfo, onTop, onBottom }) => {
-  console.log('image', image)
+  // console.log('image', image)
   const [img] = useImage(image?.src?.src);
   const trRef = React.useRef();
   const refGroup = React.useRef(null);
@@ -84,16 +84,16 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
         {isSelected && (
           <Group>
             <Rect
-              width={img ? img.width : 0}
-              height={img ? img.height : 0}
+              width={img ? img?.width : 0}
+              height={img ? img?.height : 0}
               ref={trRef}
               strokeWidth={2}
               stroke={'white'}
               visible={true}
             />
             <Group
-              x={img.width / 2 - 42.5}
-              y={-img.height / 3}
+              x={img?.width / 2 - 42.5}
+              y={-img?.height / 3}
             >
               <Rect
                 width={85}
@@ -313,6 +313,22 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
                   setTimeout(() => {
                     setOpen(true);
                   }, 10);
+                }}
+                onTop={() => {
+                  const items = images.slice();
+                  const item = items.find((el) => el.src.id === selectedId);
+                  const index = items.indexOf(item);
+                  items.splice(index, 1);
+                  items.push(item);
+                  setImages(items);
+                }}
+                onBottom={() => {
+                  const items = images.slice();
+                  const item = items.find((el) => el.src.id === selectedId);
+                  const index = items.indexOf(item);
+                  items.splice(index, 1);
+                  items.unshift(item);
+                  setImages(items);
                 }}
               />;
             })}
