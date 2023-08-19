@@ -1,0 +1,46 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "name": "Колір 1",
+      "color": "green",
+      "pic": ""
+    },
+    {
+      "id": 2,
+      "name": "Колір 2",
+      "color": "red",
+      "pic": ""
+    },
+    {
+      "id": 3,
+      "name": "Колір 3",
+      "color": "blue",
+      "pic": ""
+    },
+    {
+      "id": 4,
+      "name": "Колір 4",
+      "color": "yellow",
+      "pic": ""
+    },
+    {
+      "id": 5,
+      "name": "Колір 5",
+      "color": "pink",
+      "pic": ""
+    },
+    {
+      "id": 6,
+      "name": "Колір 6",
+      "color": "purple",
+      "pic": ""
+    },
+    {
+      "id": 7,
+      "name": "Колір 7",
+      "color": "orange",
+      "pic": ""
+    }
+  ]
+}

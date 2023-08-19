@@ -10,11 +10,14 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import Divider from '@mui/material/Divider';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 
 import RightBar from '../RightBar';
 import GoodsCtx from '../../contexts/goodsCtx';
-import goodsJson from '../../services/json/goods.json';
 import sofasJson from '../../services/json/sofas.json';
+import clothJson from '../../services/json/cloth.json';
 import * as S from './styled';
 
 export default function MainLayout() {
@@ -26,8 +29,10 @@ export default function MainLayout() {
   const [width, setWidth] = React.useState(0);
   const [length, setLength] = React.useState(0);
   const [height, setHeight] = React.useState(0);
+  const [colorId, setColorId] = React.useState(1);
   const { id: itemId } = useParams();
   const good = sofasJson.sofas.find(item => item.link === itemId);
+  goodsCtx.colorId = colorId;
 
   const handleDragOver= (e) => {
     e.stopPropagation();
@@ -55,6 +60,11 @@ export default function MainLayout() {
       ])
     );
   };
+
+  const onSetColor = (cId) => {
+    setColorId(cId);
+    goodsCtx.colorId = cId;
+  }
 
   React.useEffect(() => {
     goodsCtx.items = images;
@@ -87,13 +97,17 @@ export default function MainLayout() {
           <RightBar images={images} setImages={setImages} stageRef={stageRef} onDragOver={handleDragOver} onDrop={onDropHandler} />
         </Grid>
         <Grid item xs={12} md={3}>
+          <S.LinkStyled to="/">
+            <ArrowBackIosNewOutlinedIcon />
+            <Typography>{'Вибрати модель'}</Typography>
+          </S.LinkStyled>
           <Accordion>
             <AccordionSummary
-              // expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Sofa configuration</Typography>
+              <Typography>{'Конфігурація'}</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <ImageList sx={{ height: 550 }} cols={2} rowHeight={164}>
@@ -115,22 +129,44 @@ export default function MainLayout() {
               </ImageList>
             </AccordionDetails>
           </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>{'Вибрати тканину'}</Typography>
+            </AccordionSummary>
+            <AccordionDetails style={{ display: 'flex' }}>
+              {
+                clothJson.list.map((item, idx) => (
+                  <S.ClothItem
+                    key={idx}
+                    color={item.color}
+                    brColor={item.id === colorId}
+                    onClick={() => onSetColor(item.id)}
+                  />
+                ))
+              }
+            </AccordionDetails>
+          </Accordion>
+          {/* <Divider /> */}
           <Card sx={{ minWidth: 275 }}>
             <CardContent>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                SOFA SIZE:
+                Параметри:
               </Typography>
-              <Typography variant="h6" component="div">
-                Width: {width} sm <br />
-                Length: {length} sm <br />
-                Height: {height} sm
+              <Typography sx={{ fontSize: 16 }} component="div">
+                Ширина: {width}см <br />
+                Глибина: {length}см <br />
+                Довжина: {height}см
               </Typography>
               <hr />
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                COST:
+                Ціна:
               </Typography>
-              <Typography variant="h5" component="div">
-                {cost} UAH
+              <Typography sx={{ fontSize: 16 }} component="div">
+                {cost} грн.
               </Typography>
             </CardContent>
           </Card>
