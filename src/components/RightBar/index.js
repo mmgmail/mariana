@@ -11,10 +11,11 @@ import GoodsCtx from '../../contexts/goodsCtx';
 const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect, onChange, onDragStart, onRemove, onInfo, onTop, onBottom }) => {
   // console.log('image', image)
   const [img] = useImage(image?.src?.src);
-  console.log('img', img)
+  // console.log('img', img)
   const trRef = React.useRef();
   const refGroup = React.useRef(null);
   const imageRef = React.useRef(null);
+  const { colorItem } = React.useContext(GoodsCtx);
 
   // function updateSelectionBox() {
   //   console.log(' refShape.current',  refShape.current)
@@ -34,6 +35,16 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
     refGroup.current.rotation(nearestRotation);
   };
 
+  const applyRGBFilter = () => {
+    imageRef.current.cache();
+    imageRef.current.filters([Konva.Filters.RGBA]);
+    imageRef.current.red(colorItem.color.red); // Adjust the filter parameters as needed
+    imageRef.current.green(colorItem.color.green);
+    imageRef.current.blue(colorItem.color.blue);
+    imageRef.current.alpha(colorItem.color.alpha);
+    imageRef.current.getLayer().batchDraw();
+  }
+
   React.useEffect(() => {
     if (isSelected) {
       // we need to attach transformer manually
@@ -41,6 +52,12 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
       // trRef.current.getLayer().batchDraw();
     }
   }, [isSelected]);
+
+  React.useEffect(() => {
+    if (imageRef.current && img?.width) {
+      applyRGBFilter();
+    }
+  }, [imageRef.current, colorItem?.id, img?.width]);
 
   return (
     <React.Fragment>
@@ -172,7 +189,6 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
 };
 
 export default function RightBar({ stageRef, images, onDragOver, onDrop, setImages }) {
-  const { colorId } = React.useContext(GoodsCtx);
   const [rectangles, setRectangles] = React.useState(images);
   const [detectedSide, setDetectedSide] = React.useState(false);
   const [selectedId, selectShape] = React.useState(null);
@@ -295,48 +311,49 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
             ref={refLayer}
           >
               {images.map((image, i) => {
-              return <URLImage
-                key={i}
-                image={image}
-                stageRef={stageRef}
-                refLayer={refLayer}
-                shapeProps={image}
-                isSelected={image.src.id === selectedId}
-                onSelect={(e) => {
-                  selectShape(image?.src?.id);
-                }}
-                onChange={(newAttrs) => {
-                  const rects = images.slice();
-                  rects[i] = {...image, ...newAttrs};
-                  setImages(rects);
-                }}
-                onRemove={() => {
-                  const filterRects = images.filter((el) => el.src.id !== selectedId);
-                  setImages(filterRects);
-                }}
-                onInfo={() => {
-                  setCurrItem(image?.src?.item);
-                  setTimeout(() => {
-                    setOpen(true);
-                  }, 10);
-                }}
-                onTop={() => {
-                  const items = images.slice();
-                  const item = items.find((el) => el.src.id === selectedId);
-                  const index = items.indexOf(item);
-                  items.splice(index, 1);
-                  items.push(item);
-                  setImages(items);
-                }}
-                onBottom={() => {
-                  const items = images.slice();
-                  const item = items.find((el) => el.src.id === selectedId);
-                  const index = items.indexOf(item);
-                  items.splice(index, 1);
-                  items.unshift(item);
-                  setImages(items);
-                }}
-              />;
+              return (
+                <URLImage
+                  key={i}
+                  image={image}
+                  stageRef={stageRef}
+                  refLayer={refLayer}
+                  shapeProps={image}
+                  isSelected={image.src.id === selectedId}
+                  onSelect={(e) => {
+                    selectShape(image?.src?.id);
+                  }}
+                  onChange={(newAttrs) => {
+                    const rects = images.slice();
+                    rects[i] = {...image, ...newAttrs};
+                    setImages(rects);
+                  }}
+                  onRemove={() => {
+                    const filterRects = images.filter((el) => el.src.id !== selectedId);
+                    setImages(filterRects);
+                  }}
+                  onInfo={() => {
+                    setCurrItem(image?.src?.item);
+                    setTimeout(() => {
+                      setOpen(true);
+                    }, 10);
+                  }}
+                  onTop={() => {
+                    const items = images.slice();
+                    const item = items.find((el) => el.src.id === selectedId);
+                    const index = items.indexOf(item);
+                    items.splice(index, 1);
+                    items.push(item);
+                    setImages(items);
+                  }}
+                  onBottom={() => {
+                    const items = images.slice();
+                    const item = items.find((el) => el.src.id === selectedId);
+                    const index = items.indexOf(item);
+                    items.splice(index, 1);
+                    items.unshift(item);
+                    setImages(items);
+                  }}
+                />);
             })}
           </Layer>
         </Stage>

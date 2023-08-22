@@ -32,7 +32,7 @@ export default function MainLayout() {
   const [colorId, setColorId] = React.useState(1);
   const { id: itemId } = useParams();
   const good = sofasJson.sofas.find(item => item.link === itemId);
-  goodsCtx.colorId = colorId;
+  goodsCtx.colorItem.id = colorId;
 
   const handleDragOver= (e) => {
     e.stopPropagation();
@@ -62,8 +62,8 @@ export default function MainLayout() {
   };
 
   const onSetColor = (cId) => {
-    setColorId(cId);
-    goodsCtx.colorId = cId;
+    setColorId(cId.id);
+    goodsCtx.colorItem = cId;
   }
 
   React.useEffect(() => {
@@ -144,7 +144,7 @@ export default function MainLayout() {
                     key={idx}
                     color={item.color}
                     brColor={item.id === colorId}
-                    onClick={() => onSetColor(item.id)}
+                    onClick={() => onSetColor(item)}
                   />
                 ))
               }

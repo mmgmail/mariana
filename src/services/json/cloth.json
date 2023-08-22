@@ -3,43 +3,78 @@
     {
       "id": 1,
       "name": "Колір 1",
-      "color": "green",
+      "color": {
+        "red": 255,
+        "green": 0,
+        "blue": 0,
+        "alpha": 0.2
+      },
       "pic": ""
     },
     {
       "id": 2,
       "name": "Колір 2",
-      "color": "red",
+      "color": {
+        "red": 60,
+        "green": 179,
+        "blue": 13,
+        "alpha": 0.2
+      },
       "pic": ""
     },
     {
       "id": 3,
       "name": "Колір 3",
-      "color": "blue",
+      "color": {
+        "red": 255,
+        "green": 165,
+        "blue": 0,
+        "alpha": 0.2
+      },
       "pic": ""
     },
     {
       "id": 4,
       "name": "Колір 4",
-      "color": "yellow",
+      "color": {
+        "red": 0,
+        "green": 0,
+        "blue": 255,
+        "alpha": 0.2
+      },
       "pic": ""
     },
     {
       "id": 5,
       "name": "Колір 5",
-      "color": "pink",
+      "color": {
+        "red": 238,
+        "green": 130,
+        "blue": 238,
+        "alpha": 0.2
+      },
       "pic": ""
     },
     {
       "id": 6,
       "name": "Колір 6",
-      "color": "purple",
+      "color": {
+        "red": 106,
+        "green": 90,
+        "blue": 205,
+        "alpha": 0.2
+      },
       "pic": ""
     },
     {
       "id": 7,
       "name": "Колір 7",
-      "color": "orange",
+      "color": {
+        "red": 255,
+        "green": 99,
+        "blue": 71,
+        "alpha": 0.2
+      },
       "pic": ""
     }
   ]
