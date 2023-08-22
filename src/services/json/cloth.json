@@ -2,78 +2,177 @@
   "list": [
     {
       "id": 1,
-      "name": "Колір 1",
+      "name": "Білий",
       "color": {
-        "red": 255,
-        "green": 0,
-        "blue": 0,
-        "alpha": 0.2
+        "red": 250,
+        "green": 249,
+        "blue": 254,
+        "alpha": 0.6
       },
       "pic": ""
     },
     {
       "id": 2,
-      "name": "Колір 2",
+      "name": "Беж",
       "color": {
-        "red": 60,
-        "green": 179,
-        "blue": 13,
-        "alpha": 0.2
+        "red": 215,
+        "green": 181,
+        "blue": 167,
+        "alpha": 0.6
       },
       "pic": ""
     },
     {
       "id": 3,
-      "name": "Колір 3",
+      "name": "Бірюзовий",
       "color": {
-        "red": 255,
-        "green": 165,
-        "blue": 0,
-        "alpha": 0.2
+        "red": 63,
+        "green": 152,
+        "blue": 134,
+        "alpha": 0.6
       },
       "pic": ""
     },
     {
       "id": 4,
-      "name": "Колір 4",
+      "name": "Жовтий",
       "color": {
-        "red": 0,
-        "green": 0,
-        "blue": 255,
-        "alpha": 0.2
+        "red": 211,
+        "green": 171,
+        "blue": 75,
+        "alpha": 0.6
       },
       "pic": ""
     },
     {
       "id": 5,
-      "name": "Колір 5",
+      "name": "Зелений",
       "color": {
-        "red": 238,
-        "green": 130,
-        "blue": 238,
-        "alpha": 0.2
+        "red": 0,
+        "green": 50,
+        "blue": 38,
+        "alpha": 0.6
       },
       "pic": ""
     },
     {
       "id": 6,
-      "name": "Колір 6",
+      "name": "Коричневий",
       "color": {
-        "red": 106,
-        "green": 90,
-        "blue": 205,
-        "alpha": 0.2
+        "red": 101,
+        "green": 78,
+        "blue": 70,
+        "alpha": 0.6
       },
       "pic": ""
     },
     {
       "id": 7,
-      "name": "Колір 7",
+      "name": "Пудра",
       "color": {
-        "red": 255,
-        "green": 99,
-        "blue": 71,
-        "alpha": 0.2
+        "red": 182,
+        "green": 163,
+        "blue": 165,
+        "alpha": 0.6
+      },
+      "pic": ""
+    },
+    {
+      "id": 8,
+      "name": "Світло сірий",
+      "color": {
+        "red": 161,
+        "green": 166,
+        "blue": 172,
+        "alpha": 0.6
+      },
+      "pic": ""
+    },
+    {
+      "id": 9,
+      "name": "Сірий",
+      "color": {
+        "red": 105,
+        "green": 113,
+        "blue": 124,
+        "alpha": 0.6
+      },
+      "pic": ""
+    },
+    {
+      "id": 10,
+      "name": "Темно сірий",
+      "color": {
+        "red": 58,
+        "green": 55,
+        "blue": 62,
+        "alpha": 0.6
+      },
+      "pic": ""
+    },
+    {
+      "id": 11,
+      "name": "Сливовий",
+      "color": {
+        "red": 100,
+        "green": 61,
+        "blue": 82,
+        "alpha": 0.6
+      },
+      "pic": ""
+    },
+    {
+      "id": 12,
+      "name": "Синій",
+      "color": {
+        "red": 58,
+        "green": 90,
+        "blue": 139,
+        "alpha": 0.6
+      },
+      "pic": ""
+    },
+    {
+      "id": 13,
+      "name": "Темно-синій",
+      "color": {
+        "red": 49,
+        "green": 65,
+        "blue": 91,
+        "alpha": 0.6
+      },
+      "pic": ""
+    },
+    {
+      "id": 14,
+      "name": "Фіолетовий",
+      "color": {
+        "red": 136,
+        "green": 124,
+        "blue": 146,
+        "alpha": 0.6
+      },
+      "pic": ""
+    },
+    {
+      "id": 15,
+      "name": "Фуксія",
+      "color": {
+        "red": 118,
+        "green": 20,
+        "blue": 69,
+        "alpha": 0.6
+      },
+      "pic": ""
+    },
+    {
+      "id": 16,
+      "name": "Червоний",
+      "color": {
+        "red": 161,
+        "green": 23,
+        "blue": 49,
+        "alpha": 0.6
       },
       "pic": ""
     }

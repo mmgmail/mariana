@@ -64,8 +64,8 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
       <Group
         x={image.x}
         y={image.y}
-        offsetX={img ? img.width / 2 : 0}
-        offsetY={img ? img.height / 2 : 0}
+        offsetX={img ? img.width / 2.8 : 0}
+        offsetY={img ? img.height / 2.8 : 0}
         draggable={true}
         ref={refGroup}
         {...groupProps}
@@ -106,16 +106,16 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
         {isSelected && (
           <Group>
             <Rect
-              width={img ? img?.width : 0}
-              height={img ? img?.height : 0}
+              width={img ? (img?.width / 2.5) : 0}
+              height={img ? (img?.height / 2.5) : 0}
               ref={trRef}
               strokeWidth={2}
               stroke={'white'}
               visible={true}
             />
             <Group
-              x={img?.width / 2 - 42.5}
-              y={-img?.height / 3}
+              x={(img?.width / 2.5) / 2 - 42.5}
+              y={-(img?.height / 2.5) / 3}
             >
               <Rect
                 width={85}
@@ -170,6 +170,8 @@ const URLImage = ({ image, refShape, refLayer, groupProps, isSelected, onSelect,
         <Image
           ref={imageRef}
           image={img}
+          width={img ? img.width / 2.8 : 0}
+          height={img ? img.height / 2.8 : 0}
         />  
         
       </Group>
@@ -291,6 +293,10 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
     );
   }
 
+  React.useEffect(() => {
+    console.log('detectedSide', detectedSide);
+  }, [detectedSide]);
+
   return (
     <React.Fragment>
       <SimpleDialog item={currItem} open={open} onClose={() => setOpen(false)} />
@@ -299,8 +305,8 @@ export default function RightBar({ stageRef, images, onDragOver, onDrop, setImag
           style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: 800 }}
         />
         <Stage
-          width={1330}
-          height={800}
+          width={window.innerWidth - 300}
+          height={window.innerHeight - 127}
           style={{ border: '1px solid grey', backgroundColor: 'transparent' }}
           ref={stageRef}
           onMouseDown={checkDeselect}

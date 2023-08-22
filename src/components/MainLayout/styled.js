@@ -34,5 +34,6 @@ export const ClothItem = styled.div`
   border-style: solid;
   border-color: ${({ brColor }) => brColor ? 'black' : 'lightgray'};
   margin-right: 10px;
-  background-color: ${({ color }) => 'rgba(' + color.red + ',' + color.green + ',' + color.blue + ',' + color.alpha + ')'};
+  background-color: ${({ color }) => 'rgba(' + color.red + ',' + color.green + ',' + color.blue + ',' + 1 + ')'};
+  display: inline-block;
 `;

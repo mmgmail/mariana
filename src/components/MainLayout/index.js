@@ -137,7 +137,7 @@ export default function MainLayout() {
             >
               <Typography>{'Вибрати тканину'}</Typography>
             </AccordionSummary>
-            <AccordionDetails style={{ display: 'flex' }}>
+            <AccordionDetails>
               {
                 clothJson.list.map((item, idx) => (
                   <S.ClothItem
